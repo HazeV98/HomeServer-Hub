@@ -1,12 +1,29 @@
 :root {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --text-main: #ffffff;
-    --text-muted: #a0a0a0;
+    /* Tema Chiaro (Default) */
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
     --primary: #4a90e2;
     --primary-hover: #357abd;
-    --btn-secondary: #333333;
-    --btn-secondary-hover: #444444;
+    --btn-secondary: #edf2f7;
+    --btn-secondary-text: #2d3748;
+    --btn-secondary-hover: #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Tema Scuro */
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --text-main: #ffffff;
+        --text-muted: #a0a0a0;
+        --primary: #4a90e2;
+        --primary-hover: #357abd;
+        --btn-secondary: #333333;
+        --btn-secondary-text: #ffffff;
+        --btn-secondary-hover: #444444;
+    }
 }
 
 body {
@@ -18,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header h1 {
@@ -39,8 +57,14 @@ header h1 {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .card:hover {
@@ -72,6 +96,7 @@ header h1 {
     line-height: 1.5;
     flex-grow: 1;
     margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .actions {
@@ -89,7 +114,7 @@ header h1 {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-open {
@@ -103,7 +128,7 @@ header h1 {
 
 .btn-copy {
     background-color: var(--btn-secondary);
-    color: white;
+    color: var(--btn-secondary-text);
 }
 
 .btn-copy:hover {
@@ -112,5 +137,5 @@ header h1 {
 
 .btn-copy.copied {
     background-color: #2e7d32;
+    color: white;
 }
- 
