@@ -17,7 +17,7 @@ function renderHub(apps) {
         
         // URL per l'icona automatica e fallback in caso di errore (es. domini non esposti pubblicamente)
         const faviconUrl = `https://www.google.com/s2/favicons?domain=${app.url}&sz=128`;
-        const defaultIcon = `https://ui-avatars.com/api/?name=${encodeURIComponent(app.name)}&background=333333&color=fff&size=128&rounded=true`;
+        const defaultIcon = `https://ui-avatars.com/api/?name=${encodeURIComponent(app.name)}&background=4a90e2&color=fff&size=128&rounded=true`;
 
         card.innerHTML = `
             <div class="card-header">
