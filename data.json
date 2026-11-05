@@ -1,0 +1,17 @@
+[
+  {
+    "name": "BateoLive",
+    "url": "https://bateolive.homeserver.foo",
+    "description": "Mappa con posizioni e orari dei mezzi di trasporto pubblico"
+  },
+  {
+    "name": "MoodCinema",
+    "url": "https://moodcinema.homeserver.foo",
+    "description": "App che in base a filtri e preferenze da consigli su film e serie tv da guardare"
+  },
+  {
+    "name": "Diario Emicrania",
+    "url": "https://migraine.homeserver.foo",
+    "description": "Un diario per registrare episodi di emicrania da poter esportare in un pdf al bisogno"
+  }
+]
